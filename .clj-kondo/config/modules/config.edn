@@ -2873,8 +2873,10 @@
            warehouses.schema}
    :model-imports #{:model/Database
                     :model/Field
+                    :model/FieldUserSettings
                     :model/FieldValues
-                    :model/Table}}
+                    :model/Table
+                    :model/TableUserSettings}}
 
   sync.analyze
   {:team "Graphy"
@@ -3384,7 +3386,8 @@
           metabase.warehouse-schema.models.table
           metabase.warehouse-schema.models.table-user-settings
           metabase.warehouse-schema.schema
-          metabase.warehouse-schema.table}
+          metabase.warehouse-schema.table
+          metabase.warehouse-schema.user-settings}
    :uses #{api
            app-db
            audit-app
@@ -4293,6 +4296,7 @@
            task
            task.history
            util
+           warehouses.schema
            enterprise/serialization
            enterprise/transforms.python}
    :model-exports #{:model/RemoteSyncTask}
